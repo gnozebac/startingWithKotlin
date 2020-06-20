@@ -1,6 +1,18 @@
+import model.Frutas
+
 fun main(args: Array<String>) {
     println("::::Sistema::::")
     showMenu()
+
+
+}
+
+fun showFrutas(lista: Array<Frutas>) {
+
+    for ((i,fruta) in lista.withIndex()) {
+        println("${i+1}. ${fruta.toString()}")
+    }
+
 }
 
 fun showMenu() {
@@ -38,9 +50,26 @@ fun makeRecipe() {
 
         val response: Int = Integer.valueOf(readLine())
         when (response) {
-            1 -> println("Opcion")
+            1 -> {
+                val fresa = Frutas("Fresa")
+                val platano = Frutas("Platanno")
+                val uva = Frutas("Uva")
+                val listFruits = arrayOf(fresa, platano, uva)
+                showFrutas(listFruits)
+            }
             2 -> println("Opcion")
             3 -> println("Opcion")
+            4 -> println("Opcion")
+            5 ->
+            {
+                val fresa = Frutas("Fresa")
+                val platano = Frutas("Platanno")
+                val uva = Frutas("Uva")
+                val listFruits = arrayOf(fresa, platano, uva)
+                showFrutas(listFruits)
+            }
+            6 -> println("Opcion")
+            7 -> println("Opcion")
         }
 
     } while (response != 0)
